@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Alok_KushwahaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="SaftyEngineer">
+          <Key>
+            <PropertyRef Name="SEID" />
+          </Key>
+          <Property Name="SEID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="SEName" Type="varchar" MaxLength="50" />
+          <Property Name="SEPhone" Type="varchar" MaxLength="13" />
+          <Property Name="SEEmail" Type="varchar" MaxLength="50" />
+          <Property Name="SEAddress" Type="varchar" MaxLength="100" />
+          <Property Name="SESalary" Type="money" />
+          <Property Name="SEDesig" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityContainer Name="Alok_KushwahaModelStoreContainer">
+          <EntitySet Name="SaftyEngineer" EntityType="Self.SaftyEngineer" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Alok_KushwahaModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="SaftyEngineer">
+          <Key>
+            <PropertyRef Name="SEID" />
+          </Key>
+          <Property Name="SEID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="SEName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SEPhone" Type="String" MaxLength="13" FixedLength="false" Unicode="false" />
+          <Property Name="SEEmail" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="SEAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="SESalary" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="SEDesig" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="Alok_KushwahaEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="SaftyEngineer" EntityType="Self.SaftyEngineer" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Alok_KushwahaModelStoreContainer" CdmEntityContainer="Alok_KushwahaEntities">
+          <EntitySetMapping Name="SaftyEngineer">
+            <EntityTypeMapping TypeName="Alok_KushwahaModel.SaftyEngineer">
+              <MappingFragment StoreEntitySet="SaftyEngineer">
+                <ScalarProperty Name="SEID" ColumnName="SEID" />
+                <ScalarProperty Name="SEName" ColumnName="SEName" />
+                <ScalarProperty Name="SEPhone" ColumnName="SEPhone" />
+                <ScalarProperty Name="SEEmail" ColumnName="SEEmail" />
+                <ScalarProperty Name="SEAddress" ColumnName="SEAddress" />
+                <ScalarProperty Name="SESalary" ColumnName="SESalary" />
+                <ScalarProperty Name="SEDesig" ColumnName="SEDesig" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

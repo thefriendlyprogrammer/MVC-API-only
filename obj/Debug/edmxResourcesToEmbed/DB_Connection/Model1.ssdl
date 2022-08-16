@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Alok_KushwahaModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="SaftyEngineer">
+    <Key>
+      <PropertyRef Name="SEID" />
+    </Key>
+    <Property Name="SEID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SEName" Type="varchar" MaxLength="50" />
+    <Property Name="SEPhone" Type="varchar" MaxLength="13" />
+    <Property Name="SEEmail" Type="varchar" MaxLength="50" />
+    <Property Name="SEAddress" Type="varchar" MaxLength="100" />
+    <Property Name="SESalary" Type="money" />
+    <Property Name="SEDesig" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="Alok_KushwahaModelStoreContainer">
+    <EntitySet Name="SaftyEngineer" EntityType="Self.SaftyEngineer" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

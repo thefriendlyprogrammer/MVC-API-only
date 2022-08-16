@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Alok_KushwahaModelStoreContainer" CdmEntityContainer="Alok_KushwahaEntities">
+    <EntitySetMapping Name="SaftyEngineer">
+      <EntityTypeMapping TypeName="Alok_KushwahaModel.SaftyEngineer">
+        <MappingFragment StoreEntitySet="SaftyEngineer">
+          <ScalarProperty Name="SEID" ColumnName="SEID" />
+          <ScalarProperty Name="SEName" ColumnName="SEName" />
+          <ScalarProperty Name="SEPhone" ColumnName="SEPhone" />
+          <ScalarProperty Name="SEEmail" ColumnName="SEEmail" />
+          <ScalarProperty Name="SEAddress" ColumnName="SEAddress" />
+          <ScalarProperty Name="SESalary" ColumnName="SESalary" />
+          <ScalarProperty Name="SEDesig" ColumnName="SEDesig" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
